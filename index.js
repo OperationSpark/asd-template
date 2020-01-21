@@ -5,6 +5,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Constant Variables
+var FPS = 60;
 var KEYS = {
   "LEFT" : 37,
   "UP": 38,
@@ -41,7 +42,7 @@ function startGame() {
   $('body').on('keydown', handleKeyDown);
 
   // start the interval timer
-  updateInterval = setInterval(update, 100);
+  updateInterval = setInterval(update, 1000 / FPS);
 }
 
 /* 
