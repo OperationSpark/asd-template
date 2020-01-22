@@ -9,9 +9,10 @@ var FPS = 60;
 
 // HTML jQuery Objects
 var $board = $('#board');
+var $score = $('#score');
 
 // game variables
-
+var points = 0;
 
 // interval variable required for stopping the update function when the game ends
 var updateInterval;
