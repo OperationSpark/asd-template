@@ -7,6 +7,8 @@ git clone https://github.com/benspector3/asd-template.git
 rm -rf asd-template/.git
 ```
 
+Then, rename the folder to the project name of your choice.
+
 # Game
 
 **Table of Contents**
