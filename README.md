@@ -1,4 +1,11 @@
-Note: These project instructions are written for Mac OSX
+# To clone this template:
+
+Enter these commands into your bash terminal to clone the repository and delete the `.git/` folder:
+
+```bash
+git clone https://github.com/benspector3/asd-template.git
+rm -rf asd-template/.git
+```
 
 # Game
 
