@@ -9,7 +9,6 @@ var FPS = 60;
 
 // HTML jQuery Objects
 var $board = $('#board');
-var $score = $('#score');
 var $gameItem = $("#gameItem");
 
 // game variables
@@ -22,8 +21,6 @@ function startGame() {
   // start the interval timer
   updateInterval = setInterval(update, 1000 / FPS);
 
-  // register event handler to listen for clicks
-  $gameItem.on('click', handleItemClick);
 }
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -35,13 +32,7 @@ function startGame() {
  */
 function update() {
   
-}
-
-/**
- * Called in response to "click" events on the gameItem
- */
-function handleItemClick() {
-
+  endGame();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -52,7 +43,4 @@ function handleItemClick() {
 function endGame() {
   // stop the interval timer
   clearInterval(updateInterval);
-
-  // turn off event handlers
-  $gameItem.off();
 }
