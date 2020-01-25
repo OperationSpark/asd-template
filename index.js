@@ -14,14 +14,16 @@ $(document).ready(function(){
 
   // game variables
 
-
   // interval variable required for stopping the update function when the game ends
   var updateInterval;
 
-  function startGame() {
-    
+  function startGame() { /* CALL ME! */
+
     // start the interval timer
     updateInterval = setInterval(update, 1000 / FPS);
+
+    // turn on event handlers
+    $(document).on('click', handleEvent);
   }
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -33,7 +35,7 @@ $(document).ready(function(){
   */
   function update() {
     
-    endGame();
+
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -44,6 +46,17 @@ $(document).ready(function(){
   function endGame() {
     // stop the interval timer
     clearInterval(updateInterval);
+
+    // turn off event handlers
+    $(document).off();
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////// EVENT HANDLERS //////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////
+
+  function handleEvent(event) {
+
   }
 
 });
