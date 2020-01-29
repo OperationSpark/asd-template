@@ -11,8 +11,7 @@ $(document).ready(function(){
   var BOARD_HEIGHT = $("#board").height();
   
   // HTML jQuery Objects
-  var gameItem = {};
-  gameItem.$element = $("#gameItem");
+  var $gameItem = $("#gameItem");
 
   // other game variables
 
@@ -61,7 +60,4 @@ $(document).ready(function(){
 
   }
   
-  
-
-
 });
