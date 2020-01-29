@@ -4,32 +4,26 @@ $(document).ready(function(){
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// INITIALIZATION ///////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-  
-  // HTML jQuery Objects
-  var $board = $('#board');
-  var $gameItem = $("#gameItem");
 
   // Constant Variables
   var FPS = 60;
+  var BOARD_WIDTH = $("#board").width();
+  var BOARD_HEIGHT = $("#board").height();
+  
+  // HTML jQuery Objects
+  var gameItem = {};
+  gameItem.$element = $("#gameItem");
 
-  // game variables
+  // other game variables
 
   // interval variable required for stopping the update function when the game ends
   var updateInterval;
 
-  startGame();
-  function startGame() {
-
-    // start the interval timer
-    updateInterval = setInterval(update, 1000 / FPS);
-
-    // turn on event handlers
-    $(document).on('click', handleEvent);
-  }
+  turnOnEvents();
+  
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
 
   /* 
   * Called once per "interval"
@@ -42,16 +36,23 @@ $(document).ready(function(){
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+  
+  function turnOnEvents() {
+    // start the interval timer
+    updateInterval = setInterval(update, 1000 / FPS);
 
+    // turn on event handlers
+    $(document).on('click', handleEvent);
+  }
 
-  function endGame() {
+  function turnOffEvents() {
     // stop the interval timer
     clearInterval(updateInterval);
 
     // turn off event handlers
     $(document).off();
   }
-
+  
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// EVENT HANDLERS //////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -59,5 +60,8 @@ $(document).ready(function(){
   function handleEvent(event) {
 
   }
+  
+  
+
 
 });
