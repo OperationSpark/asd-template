@@ -17,7 +17,8 @@ $(document).ready(function(){
   // interval variable required for stopping the update function when the game ends
   var updateInterval;
 
-  function startGame() { /* CALL ME! */
+  startGame();
+  function startGame() {
 
     // start the interval timer
     updateInterval = setInterval(update, 1000 / FPS);
