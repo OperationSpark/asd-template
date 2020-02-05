@@ -11,6 +11,8 @@ Then, rename the folder to the project name of your choice.
 
 # Planning
 
+_NOTE: Many of these steps reference the [Bouncing Box Project](https://jsbin.com/goyuhod/3/edit?html,output)_
+
 Always start any programming task by clarifying what you want to do and then breaking it down into small steps. Small steps can get you just about anywhere if you’ve got enough time. If you get stuck, break it down smaller!
 
 With your partner, consider each of these questions and make sure you are aligned on your answers:
