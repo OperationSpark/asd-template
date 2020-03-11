@@ -15,7 +15,7 @@ _NOTE: Many of these steps reference the [Bouncing Box Project](https://jsbin.co
 
 Always start any programming task by clarifying what you want to do and then breaking it down into small steps. Small steps can get you just about anywhere if you’ve got enough time. If you get stuck, break it down smaller!
 
-With your partner, consider each of these questions and make sure you are aligned on your answers:
+With your partner, create a file called `planning.txt` where you write down your answers to these questions
 
 ### User Story / Gameplay
 - Describe the gameplay
@@ -31,9 +31,10 @@ With your partner, consider each of these questions and make sure you are aligne
 
 ### Events / Logic 
 - What events will occur in this game? (timer events, keyboard events, clicking events?)
+- How do those events affect the data of the program?
 - For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
 
-**Bouncing Box Example:**
-
-1. When the user clicks on the box --> the score increases and is displayed on the box, the speed increases, the box is reset to the starting position. 
-2. When the timer ticks --> the box will move forward in some direction, if it hits the edge of the screen, reverse the direction 
+For example: in bouncing box, when the box is clicked:
+1. The speed is increased
+2. The point total goes up by 1 and is displayed on the box
+3. The position of the box is reset to 0
