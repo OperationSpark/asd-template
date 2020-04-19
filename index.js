@@ -11,23 +11,25 @@ $(document).ready(function(){
   var BOARD_HEIGHT = $("#board").height();
   
   // HTML jQuery Objects
-  var $gameItemElement = $("#gameItem");
+  var $board = $("#board");
 
   // other game variables
 
   // interval variable required for stopping the update function when the game ends
   var updateInterval;
 
-  turnOnEvents();
   
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+  
+  // start the game
+  startGame();
 
   /* 
   * Called once per "interval"
   */
-  function update() {
+  function drawNewFrame() {
     
 
   }
@@ -46,15 +48,15 @@ $(document).ready(function(){
 
   }
   
-  function turnOnEvents() {
+  function startGame() {
     // start the interval timer
-    updateInterval = setInterval(update, 1000 / FPS);
+    updateInterval = setInterval(drawNewFrame, 1000 / FPS);
 
     // turn on event handlers
-    $(document).on('click', handleEvent);
+    $(document).on('eventType', handleEvent);
   }
 
-  function turnOffEvents() {
+  function endGame() {
     // stop the interval timer
     clearInterval(updateInterval);
 
