@@ -15,8 +15,8 @@ $(document).ready(function(){
 
   // other game variables
 
-  // interval variable required for stopping the update function when the game ends
-  var updateInterval;
+  // timer variable required for stopping the `drawNewFrame` function when the game ends
+  var newFrameTimer;
 
   
   ////////////////////////////////////////////////////////////////////////////////
@@ -27,7 +27,8 @@ $(document).ready(function(){
   startGame();
 
   /* 
-  * Called once per "interval"
+  * On each "tick" of the timer, a new frame is dynamically drawn using JavaScript
+  * by calling this function and executing the code inside.
   */
   function drawNewFrame() {
     
@@ -50,15 +51,16 @@ $(document).ready(function(){
   
   function startGame() {
     // start the interval timer
-    updateInterval = setInterval(drawNewFrame, 1000 / FPS);
+    var interval = 1000 / FPS;  // the interval is how long the computer will wait between frames
+    newFrameTimer = setInterval(drawNewFrame, interval);
 
     // turn on event handlers
-    $(document).on('eventType', handleEvent);
+    $(document).on('eventType', handleEvent); // change 'eventType' to the type of event you want to handle
   }
 
   function endGame() {
     // stop the interval timer
-    clearInterval(updateInterval);
+    clearInterval(newFrameTimer);
 
     // turn off event handlers
     $(document).off();
