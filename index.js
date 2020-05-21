@@ -7,13 +7,12 @@ $(document).ready(function(){
 
   // Constant Variables
   var FPS = 60;
-  var BOARD_WIDTH = $("#board").width();
-  var BOARD_HEIGHT = $("#board").height();
   
-  // HTML jQuery Objects
-  var $board = $("#board");
+  // Game Item Objects
+
 
   // other game variables
+  
 
   // timer variable required for stopping the `drawNewFrame` function when the game ends
   var newFrameTimer;
