@@ -14,52 +14,38 @@ $(document).ready(function(){
   // other game variables
   
 
-  // timer variable required for stopping the `drawNewFrame` function when the game ends
-  var newFrameTimer;
-
-  
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   
-  // start the game
-  startGame();
+  // turn on event handlers
+  var interval = setInterval(drawNewFrame, 1000 / FPS);   // execute drawNewFrame 60 times per second.
+  $(document).on('eventType', handleEvent);               // change 'eventType' to the type of event you want to handle
 
   /* 
-  * On each "tick" of the timer, a new frame is dynamically drawn using JavaScript
-  * by calling this function and executing the code inside.
+  On each "tick" of the timer, a new frame is dynamically drawn using JavaScript
+  by calling this function and executing the code inside.
   */
   function drawNewFrame() {
     
+
+  }
+  
+  /* 
+  Called in response to events.
+  */
+  function handleEvent(event) {
 
   }
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-  
-  
-  
-  ////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////// EVENT HANDLERS //////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////
 
-  function handleEvent(event) {
-
-  }
   
-  function startGame() {
-    // start the interval timer
-    var interval = 1000 / FPS;  // the interval is how long the computer will wait between frames
-    newFrameTimer = setInterval(drawNewFrame, interval);
-
-    // turn on event handlers
-    $(document).on('eventType', handleEvent); // change 'eventType' to the type of event you want to handle
-  }
-
   function endGame() {
     // stop the interval timer
-    clearInterval(newFrameTimer);
+    clearInterval(interval);
 
     // turn off event handlers
     $(document).off();
