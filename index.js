@@ -19,7 +19,7 @@ $(document).ready(function(){
   ////////////////////////////////////////////////////////////////////////////////
   
   // turn on event handlers
-  var interval = setInterval(newFrame, 1000 / FPS);   // execute drawNewFrame 60 times per second.
+  var interval = setInterval(newFrame, 1000 / FPS);   // execute newFrame 60 times per second.
   $(document).on('eventType', handleEvent);               // change 'eventType' to the type of event you want to handle
 
   /* 
