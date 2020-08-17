@@ -1,6 +1,8 @@
-/* global $, sessionStorage*/
+/* global $, sessionStorage */
 
-$(document).ready(function(){
+$(document).ready(runProgram); // wait for the HTML / CSS elements of the page to fully load, then execute runProgram()
+  
+function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -48,4 +50,4 @@ $(document).ready(function(){
     $(document).off();
   }
   
-});
+}
