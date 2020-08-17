@@ -8,14 +8,14 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
 
   // Constant Variables
-  var FPS = 60;
+  var FRAMES_PER_SECOND_INTERVAL = 1000 / 60;
   
   // Game Item Objects
 
 
   // one-time setup
-  var interval = setInterval(newFrame, 1000 / FPS);   // execute newFrame 60 times per second.
-  $(document).on('eventType', handleEvent);           // change 'eventType' to the type of event you want to handle
+  var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame 60 times per second.
+  $(document).on('eventType', handleEvent);                           // change 'eventType' to the type of event you want to handle
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
