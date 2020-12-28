@@ -3,7 +3,7 @@
 Enter these commands into your bash terminal to clone the repository and delete the `.git/` folder:
 
 ```bash
-git clone https://github.com/benspector3/asd-template.git
+git clone https://github.com/OperationSpark/asd-template.git
 rm -rf asd-template/.git
 ```
 
